@@ -1,0 +1,39 @@
+.musiclist-container {
+    display: flex;
+    padding: 14rpx 20rpx;
+    align-self: center;
+}
+
+.musiclist-index {
+    color: #888;
+    font-size: 34rpx;
+    width: 80rpx;
+}
+
+.musiclist-info {
+    flex-grow: 1;
+    width: 0;
+}
+
+.musiclist-name{
+    font-size: 34rpx;
+    color: #333;
+    overflow: hidden;/*overflow 属性规定当内容溢出元素框时发生的事情。*/
+    text-overflow: ellipsis;/*显示省略符号来代表被修剪的文本。	*/
+    white-space: nowrap;/*不换行*/
+    margin-bottom: 10rpx;
+}
+
+.musiclist-alia {
+    color: #888;
+}
+
+.musiclist-singer {
+    font-size: 24rpx;
+    color: #888;
+}
+
+.playing view, .playing text {
+    color: #d43c33;
+  }
+  
