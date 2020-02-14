@@ -19,8 +19,9 @@ Component({
    */
   methods: {
     onSelect(event) {
+      console.log(event)
       const ds =event.currentTarget.dataset
-      const musicid = ds.musicid
+      const musicid = ds.musicid//音乐id
       this.setData({
         playingId: musicid
       })
