@@ -1,4 +1,3 @@
-<!--pages/player/player.wxml-->
 <view class="player-container" style="background:url({{picUrl}}) center/cover no-repeat"></view>
 <view class="player-mask"></view>
 
@@ -6,6 +5,14 @@
   <!-- 封面信息 -->
   <view class="player-disc {{isPlaying?'play': ''}}" bind:tap="onChangeLyricShow" hidden="{{isLyricShow}}">
     <image class="player-img rotation {{isPlaying?'':'rotation-paused'}}" src="{{picUrl}}"></image>
+  </view>
+
+  <!-- 歌词 -->
+  <x-lyric class="lyric" isLyricShow="{{!isLyricShow}}" bind:tap="onChangeLyricShow" lyric="{{lyric}}" />
+
+  <!-- 进度条 -->
+  <view class="progress-bar">
+    <x-progress-bar bind:musicEnd="onNext" bind:timeUpdate="timeUpdate" bind:musicPlay="onPlay" bind:musicPause="onPause" isSame="{{isSame}}" />
   </view>
 
     <!-- 按钮 -->

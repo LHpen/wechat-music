@@ -38,6 +38,13 @@ exports.main = async (event, context) => {
       return res
     })
   })
+ 
+ // 请求歌词
+  app.router('lyric', async (ctx, next) => {
+    ctx.body = await rp(BASE_URL + `/lyric?id=${event.musicId}`).then((res) => {
+      return res
+    })
+  })
 
- return app.serve()
+  return app.serve()
 }
